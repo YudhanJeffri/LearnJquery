@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Yudhan Belajar jQuery</title>
+        <script type="text/javascript" src="jquery.js"></script>
+    </head>
+    <body>
+        <h1>Form Login</h1>
+        
+        <br><br>
+        <form action="">
+            <label for="">Username</label>
+            <br><br>
+            <input type="text">
+            <br><br>
+
+            <label for="">Password</label>
+            <br><br>
+            <input type="password" class="pass">
+            <br>
+            <input type="checkbox" class="cbox"> Show password
+            <br>
+            <button>Login</button>
+        </form>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('.cbox').click(function(){
+                if($(this).is(':checked')){
+                    $('.pass').attr('type','text');
+                } else {
+                    $('.pass').attr('type','password');
+                }
+                
+            });
+        });
+
+        </script>
+    </body>
+</html>
